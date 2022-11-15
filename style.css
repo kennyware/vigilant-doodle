@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    --dark-blue: hsl(233, 47%, 7%);
+    --desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --main-font: 'Inter', sans-serif;
+    --secondary-font: 'Lexend Deca', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background-color: var(--dark-blue);
+}
+
+.stat-card {
+    margin: 0 auto;
+    margin-top: 10%;
+    max-width: 650px;
+    width: 80%;
+    display: flex;
+    background-color: var(--desaturated-blue);
+    border-radius: 5px;
+}
+
+.hero {
+    width: 100%;
+    /* background-image: url('./images/image-header-desktop.jpg');
+    background-position: center;
+    background-size: contain; */
+    border-radius: 0 5px 5px 0;
+    position: relative;
+    display: flex;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: var(--soft-violet);
+    opacity: .4;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main {
+    padding: 30px;
+}
+
+.heading {
+    color: #fff;
+    font-size: 24px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.heading span {
+    color: var(--soft-violet)
+}
+
+.copy {
+    font-family: var(--secondary-font);
+    font-size: 14px;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 30px;
+    line-height: 2;
+}
+
+.stat-line {
+    display: flex;
+}
+
+.stat-group {
+    margin-right: 20px;
+}
+
+.stat {
+    color: #fff;
+    font-family: var(--main-font);
+    font-weight: 700;
+}
+
+.stat-heading {
+    font-family: var(--secondary-font);
+    font-size: 10px;
+    color: hsla(0, 0%, 100%, 0.6)
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.hero-img {
+    border-radius: 0 5px 5px 0;
+}
+
+@media screen and (max-width: 376px) {
+    .stat-card {
+        flex-direction: column;
+    }
+
+    .main {
+        order: 2;
+        text-align: center;
+    }
+
+    .stat-line {
+        flex-direction: column;
+    }
+
+    .stat-group {
+        margin-bottom: 25px;
+    }
+
+    .hero { 
+        order: 1;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .hero-img {
+        border-radius: 5px 5px 0 0;
+    }
+    
+
+
+}
